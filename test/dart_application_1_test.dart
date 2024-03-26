@@ -10,7 +10,7 @@ void main() {
     'calculateAsync',
     () {
       test('calculateAsync with await', () async {
-        expect(await calculateAsync(), 42);
+        expect(await calculateAsync(), equals(42));
       });
 
       test('calculateAsync with completion', () {
