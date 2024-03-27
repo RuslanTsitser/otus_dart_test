@@ -61,12 +61,12 @@ void main() {
     'expectAsync',
     () {
       test('expectAsync', () {
-        final callback = expectAsync0(() => print('callback'));
+        final callback = expectAsync0(() => hello());
         callback();
       });
 
       test('expectAsync with count', () {
-        final callback = expectAsync0(() => print('callback'), count: 2);
+        final callback = expectAsync0(() => hello(), count: 2);
         callback();
         callback();
       });
@@ -85,3 +85,5 @@ void main() {
     },
   );
 }
+
+Future<void> hello() async => print('callback');
